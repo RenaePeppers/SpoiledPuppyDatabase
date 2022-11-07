@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheSpoiledPuppyDatabase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="testimonials">
+    <div class="card card--bg-purple">
+        <h1>The Spoiled Puppy (and Kitty) Database</h1>
+    </div>
+
+    <div class="card card--bg-gray-blue">
+        <h2>Pets Currently in the Database</h2>  <!--this stuff ties to server.js get -->
+
+        <ul class="pets card__lead">
+           <% for(let i=0; i< info.length; i++) {%>  <!--this is starting an object.  info is the list we get from database-->
+                <li class="pet">
+                    <span><%= info[i] %></span>  <!--render the current info[i]-->
+                </li>
+            <% } %>   <!--close the object-->
+        </ul>
+    </div>
+
+    <div class="card card--bg-black-blue">
+        <div class="display-info-box">
+        <section class="column1">
+           <h2>Display Info on a Specific Pet</h2>
+            <input type="text" placeholder="Enter Pet Name" >
+            <button id="currentButton" class="button-effect">  Click to get info  </button>
+          
+            <ul>
+                <li><span>Type:  </span> <span id= "type"></span></li>       
+                <li><span>Gender:  </span> <span id= "gender"></span> </li>
+                <li><span>Favorite Activities:  </span> <span id= "favoriteActivities"></span></li>
+            </ul>
+        </section>
+
+        <section class="column2">
+        <img src ="https://petspicturehosting.netlify.app/images/defaultPic.JPG"  id='image' alt ="No Picture Available">
+        </section>
+    </div>
+    </div>
+
+    <div class="card card--bg-lightpurple">
+        <div class="update-the-database">
+        <section class="column">
+
+            <form action="/api" method="POST">  <!--this works with the POST in server.js-->
+                <h2>Update the Database</h2>
+                <input type="text" placeholder="Enter Pet Name" name="petName">  <!--name has to match property in mongo-->
+                
+                <input type="text" placeholder="Paste Picture Link" name="image">                  
+
+               <input type="text" placeholder="Enter Type of Pet" name="type">
+
+                <input type="text" type="text" placeholder="Enter Gender" name="gender">     
+
+                <button class="row2 button-effect"  type="submit">Create New Pet</button>   <!--this works with the POST-->
+              
+                <h3 class="row3"> -OR- </h3>
+               
+                <button class="row4 button-effect" type="button" 
+                 id="updateButton">Update Existing</button> <!--this works with the PUT and needs listener,etc to work-->  
+                <h4 class="row5" > (empty fields won't change)</h4>  
+
+                <textarea rows="5" cols="40" type="text" placeholder="Enter Favorite Activities" name="favoriteActivities"></textarea>
+            </form>
+       </section>
+       </div>
+    </div>
+
+    <div class="card card--bg-gray-blue">
+        <h2> Delete a Pet from the Database</h2>
+        <input type="text" placeholder="Enter the name here" name="deleteInput" id="deleteInput">
+        <button id="deleteButton" class="button-effect">Delete</button> 
+    </div>
+
+</div>
+
+<script type ="text/javascript" src="main.js"></script>
+</body>
+</html>
