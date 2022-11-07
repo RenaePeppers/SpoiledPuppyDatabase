@@ -1,22 +1,25 @@
-#100Devs Simple Express App Submission
+# The Spoiled Puppy Database
+An application that allows you to add your favorite pets to the Spoiled Puppy Database :puppy:
 
-### Goal: Make Your Own CRUD APP and Push To Heroku
+<a href="https://ibb.co/5L4MDRy"><img src="https://i.ibb.co/DQWVXRy/groceryapplandingpage.png" alt="SpoiledPuppyLandingPage" border="0" /></a>
 
-### How to submit your code for review:
+Link: [The Spoiled Puppy Database](https://spoiled-puppy-database.herokuapp.com/)
 
-- Fork and clone this repo
-- Create a new branch called answer
-- Checkout answer branch
-- Push to your fork
-- Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
+## Packages/Dependencies
 
-Example:
-```
-I completed the challenge: 5
-I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+**Tech used:** express,  dotenv, ejs, express-session, mongodb, nodemon
+
+
+## Optimizations
+Possible future optimatizations:
+- [ ] Make the site responsive for smaller viewports.
+- [ ] Add a drop-down list.
+- [ ] Create user and guest accounts.
+
+
+
+## Other Links
+ [RenaePeppers](https://github.com/RenaePeppers)
+ [Website](https://pepperswebdev.netlify.app)
+ [LinkedIn](https://www.linkedin.com/in/jrenaepeppers/)
+ [Twitter](https://twitter.com/JRenaePeppers)
