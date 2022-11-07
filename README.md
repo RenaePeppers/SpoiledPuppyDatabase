@@ -1,7 +1,7 @@
 # The Spoiled Puppy Database
 A full-stack CRUD application that allows you to include your favorite pets in the Spoiled Puppy Database.  You can describe your pet and add a picture link.  You can also modify existing entries and view other adorable pets in the database.
 
-<a href="https://petspicturehosting.netlify.app"><img src="https://petspicturehosting.netlify.app/images/defaultPic.JPG"  alt="SpoiledPuppyLandingPage" border="0" /></a>
+<a href="https://petspicturehosting.netlify.app"><img src="https://petspicturehosting.netlify.app/images/githubPic.JPG"  alt="SpoiledPuppyLandingPage" border="0" /></a>
 
 Link: [The Spoiled Puppy Database](https://spoiled-puppy-database.herokuapp.com/)
 
