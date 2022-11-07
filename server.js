@@ -37,8 +37,7 @@ let db,     //declare global variables outside of functions
             
         })
         
-        //***********attempt to display selected pet
-        //******This is the section that I can't get to work.  Tried rendering to ejs file.  Also tried just using main.js to display results****/
+        //*********** display selected pet
         app.get('/api/:petName', (request, response) =>{
             const petsName = request.params.petName
             db.collection('collection_of_spoiled_puppies').find({petName: petsName}).toArray()
